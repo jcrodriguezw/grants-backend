@@ -50,6 +50,7 @@ module.exports = gql`
 
   type Query {
     announcements : [Announcement!]
+    announcement(id: ID!) : Announcement!
   }
 
   type Mutation {
