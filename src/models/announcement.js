@@ -11,12 +11,14 @@ const announcementSchema = new Schema({
   grantorContact: String,
   agencyContactPhone: String,
   agencyContactEmail: String,
-  estimatedPostDate: Date,
-  applicationDueDate: Date,
-  postedDate: mongoose.Schema.Types.Date,
-  closeDate: Date,
-  lastUpdate: mongoose.Schema.Types.Date,
+  estimatedPostDate: String,
+  applicationDueDate: String,
+  postedDate: String,
+  closeDate: String,
+  lastUpdate: String,
   version: String,
+}, {
+  timestamps: true
 })
 
 const Announcement = mongoose.model("Announcement", announcementSchema)
