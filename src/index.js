@@ -6,6 +6,8 @@ const models = require('./models')
 
 connectDb()
 
+//apollo server
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
