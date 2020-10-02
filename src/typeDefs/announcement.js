@@ -4,44 +4,87 @@ module.exports = gql`
 
   type Announcement {
     id: ID!
+    categoryOfFundingActivity: String
     opportunityNumber: String!
-    opportunityTitle: String!
-    agencyCode: String!
-    agencyName: String!
-    estimatedFunding: String
-    awardsNumber: Int
-    grantorContact: String
-    agencyContactPhone: String
-    agencyContactEmail: String
-    estimatedPostDate: String
-    applicationDueDate: String
-    postedDate: String
+    grantorContactText: String
+    opportunityID: String
+    closeDateExplanation: String
+    cfdaNumbers: String
+    opportunityCategory: String
+    description: String
     closeDate: String
-    lastUpdate: String
+    estimatedTotalProgramFunding: String
+    awardCeiling: String
+    lastUpdatedDate: String
+    grantorContactEmailDescription: String
+    archiveDate: String
+    awardFloor: String
+    fundingInstrumentType: String
+    expectedNumberOfAwards: String
+    grantorContactEmail: String
+    costSharingOrMatchingRequirement: String
     version: String
+    opportunityTitle: String
+    postDate: String
+    agencyName: String
+    eligibleApplicants: String
+    agencyCode: String
   }
 
-  input CreateAnnouncementInput {
-    opportunityTitle: String!
 
+  input CreateAnnouncementInput {
+    categoryOfFundingActivity: String!
+    opportunityNumber: String!
+    grantorContactText: String!
+    opportunityID: String!
+    closeDateExplanation: String!
+    cfdaNumbers: String!
+    opportunityCategory: String!
+    description: String!
+    closeDate: String!
+    estimatedTotalProgramFunding: String!
+    awardCeiling: String!
+    lastUpdatedDate: String!
+    grantorContactEmailDescription: String!
+    archiveDate: String!
+    awardFloor: String!
+    fundingInstrumentType: String!
+    expectedNumberOfAwards: String!
+    grantorContactEmail: String!
+    costSharingOrMatchingRequirement: String!
+    version: String!
+    opportunityTitle: String!
+    postDate: String!
+    agencyName: String!
+    eligibleApplicants: String!
+    agencyCode: String!
   }
 
   input updateAnnouncementInput {
+    categoryOfFundingActivity: String
     opportunityNumber: String
-    opportunityTitle: String
-    agencyCode: String
-    agencyName: String
-    estimatedFunding: Int
-    awardsNumber: Int
-    grantorContact: String
-    agencyContactPhone: String
-    agencyContactEmail: String
-    estimatedPostDate: String
-    applicationDueDate: String
-    postedDate: String
+    grantorContactText: String
+    opportunityID: String
+    closeDateExplanation: String
+    cfdaNumbers: String
+    opportunityCategory: String
+    description: String
     closeDate: String
-    lastUpdate: String
+    estimatedTotalProgramFunding: String
+    awardCeiling: String
+    lastUpdatedDate: String
+    grantorContactEmailDescription: String
+    archiveDate: String
+    awardFloor: String
+    fundingInstrumentType: String
+    expectedNumberOfAwards: String
+    grantorContactEmail: String
+    costSharingOrMatchingRequirement: String
     version: String
+    opportunityTitle: String
+    agencyName: String
+    eligibleApplicants: String
+    agencyCode: String
   }
 
   type DeletePayload {
