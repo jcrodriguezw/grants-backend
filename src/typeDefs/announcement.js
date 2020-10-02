@@ -5,7 +5,7 @@ module.exports = gql`
   type Announcement {
     id: ID!
     categoryOfFundingActivity: String
-    opportunityNumber: String!
+    opportunityNumber: String
     grantorContactText: String
     opportunityID: String
     closeDateExplanation: String
@@ -64,7 +64,6 @@ module.exports = gql`
     categoryOfFundingActivity: String
     opportunityNumber: String
     grantorContactText: String
-    opportunityID: String
     closeDateExplanation: String
     cfdaNumbers: String
     opportunityCategory: String
@@ -98,7 +97,7 @@ module.exports = gql`
 
   type Mutation {
     createAnnouncement(input: CreateAnnouncementInput!): Announcement!
-    updateAnnouncement(id: ID!, input: updateAnnouncementInput!): Announcement!
+    updateAnnouncement(id: ID!, input: updateAnnouncementInput): Announcement!
     deleteAnnouncement(id: ID!): DeletePayload
   }
 `
